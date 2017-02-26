@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OversigtViewController.swift
 //  ToDo
 //
 //  Created by Michael Kjemtrup on 26/02/2017.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class OversigtViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var TaskTableView: UITableView!
     
@@ -65,7 +65,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func tilføjOpgave(_ sender: Any) {
         performSegue(withIdentifier: "tilføjopgsegue", sender: nil )
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! tilf_jopgViewController
+        nextVC.tidlVC = self 
+    }
     
     
     

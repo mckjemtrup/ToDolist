@@ -13,7 +13,7 @@
         <!--ToDo-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="OversigtViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -53,10 +53,10 @@
             </objects>
             <point key="canvasLocation" x="860" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Tilf jopg View Controller-->
         <scene sceneID="56t-cf-i6O">
             <objects>
-                <viewController id="i9z-XI-dtg" sceneMemberID="viewController">
+                <viewController id="i9z-XI-dtg" customClass="tilf_jopgViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="F1N-Xi-R37"/>
                         <viewControllerLayoutGuide type="bottom" id="nlN-DX-CtL"/>
@@ -64,8 +64,48 @@
                     <view key="view" contentMode="scaleToFill" id="Sts-wR-PC0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Opgavenavn" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="otL-HT-ZVF">
+                                <rect key="frame" x="56" y="114" width="263" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vigtig" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Umz-Xj-CwM">
+                                <rect key="frame" x="165" y="174" width="45" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qgd-Ck-uVQ">
+                                <rect key="frame" x="163" y="225" width="51" height="31"/>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcn-ui-wEq">
+                                <rect key="frame" x="143" y="286" width="88" height="30"/>
+                                <state key="normal" title="Tilføj opgave"/>
+                                <connections>
+                                    <action selector="opretOpgave:" destination="i9z-XI-dtg" eventType="touchUpInside" id="MDN-w0-ukE"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qgd-Ck-uVQ" firstAttribute="centerX" secondItem="Sts-wR-PC0" secondAttribute="centerX" id="0gG-La-QY3"/>
+                            <constraint firstItem="Umz-Xj-CwM" firstAttribute="top" secondItem="otL-HT-ZVF" secondAttribute="bottom" constant="30" id="3p0-H0-ceF"/>
+                            <constraint firstItem="otL-HT-ZVF" firstAttribute="leading" secondItem="Sts-wR-PC0" secondAttribute="leadingMargin" constant="40" id="8cN-uz-ISb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="otL-HT-ZVF" secondAttribute="trailing" constant="40" id="Brg-ul-hzv"/>
+                            <constraint firstItem="mcn-ui-wEq" firstAttribute="top" secondItem="qgd-Ck-uVQ" secondAttribute="bottom" constant="30" id="UpH-wv-p6d"/>
+                            <constraint firstItem="otL-HT-ZVF" firstAttribute="top" secondItem="F1N-Xi-R37" secondAttribute="bottom" constant="50" id="cs1-me-NAr"/>
+                            <constraint firstItem="otL-HT-ZVF" firstAttribute="centerX" secondItem="Sts-wR-PC0" secondAttribute="centerX" id="hZO-cN-tPk"/>
+                            <constraint firstItem="qgd-Ck-uVQ" firstAttribute="top" secondItem="Umz-Xj-CwM" secondAttribute="bottom" constant="30" id="nwA-4M-XOw"/>
+                            <constraint firstItem="mcn-ui-wEq" firstAttribute="centerX" secondItem="Sts-wR-PC0" secondAttribute="centerX" id="oS7-bJ-TSO"/>
+                            <constraint firstItem="Umz-Xj-CwM" firstAttribute="centerX" secondItem="Sts-wR-PC0" secondAttribute="centerX" id="xp3-WZ-ae0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="opgaveNavnTekstBoks" destination="otL-HT-ZVF" id="MAF-uo-bbg"/>
+                        <outlet property="vigtighedsswitch" destination="qgd-Ck-uVQ" id="9U7-Ou-y5y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I4R-j4-Hwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
