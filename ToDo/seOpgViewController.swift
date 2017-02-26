@@ -13,6 +13,7 @@ class seOpgViewController: UIViewController {
    
     
     var opgaver = opgave()
+    var tidlVC = OversigtViewController()
     
     @IBOutlet weak var vigtigLabel: UILabel!
     @IBOutlet weak var OPGLabel: UILabel!
@@ -21,7 +22,13 @@ class seOpgViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-    OPGLabel.text = opgaver.opgnavn
+  
+        
+        if opgaver.vigtighed {
+            OPGLabel.text = "‼️\(opgaver.opgnavn)"
+        } else {
+            OPGLabel.text = opgaver.opgnavn
+        }
         
       
         
@@ -29,6 +36,11 @@ class seOpgViewController: UIViewController {
 
     
     @IBAction func SubmitBtnPushed(_ sender: Any) {
+        tidlVC.opgaver.remove(at: tidlVC.valgtIndex)
+        tidlVC.TaskTableView.reloadData()
+        navigationController!.popViewController(animated: true)
+        
+       
     }
     
     

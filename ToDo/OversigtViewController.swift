@@ -13,6 +13,8 @@ class OversigtViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var TaskTableView: UITableView!
     
     var opgaver : [opgave]  = []
+    var valgtIndex = 0
+    
     
     
     override func viewDidLoad() {
@@ -42,6 +44,8 @@ class OversigtViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        valgtIndex = indexPath.row
         let opgaven = opgaver[indexPath.row]
         performSegue(withIdentifier: "valgtOpgaveSegue", sender: opgaven)
     }
@@ -82,6 +86,7 @@ class OversigtViewController: UIViewController, UITableViewDataSource, UITableVi
         if segue.identifier == "valgtOpgaveSegue"{
             let nextVC = segue.destination as! seOpgViewController
             nextVC.opgaver = sender as! opgave
+            nextVC.tidlVC = self
             
             
         
