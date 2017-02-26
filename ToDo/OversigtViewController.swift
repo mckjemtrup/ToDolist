@@ -31,15 +31,21 @@ class OversigtViewController: UIViewController, UITableViewDataSource, UITableVi
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        let opgave = opgaver[indexPath.row]
-        if opgave.vigtighed {
-            cell.textLabel?.text = "‼️\(opgave.opgnavn)"
+        let opgave30 = opgaver[indexPath.row]
+        if opgave30.vigtighed {
+            cell.textLabel?.text = "‼️\(opgave30.opgnavn)"
         } else {
-            cell.textLabel?.text = opgave.opgnavn
+            cell.textLabel?.text = opgave30.opgnavn
         }
         
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let opgaven = opgaver[indexPath.row]
+        performSegue(withIdentifier: "valgtOpgaveSegue", sender: opgaven)
+    }
+    
     
     func opretOpgave() -> [opgave] {
         let opgave1 = opgave()
@@ -66,8 +72,22 @@ class OversigtViewController: UIViewController, UITableViewDataSource, UITableVi
         performSegue(withIdentifier: "tilføjopgsegue", sender: nil )
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        
+        if segue.identifier == "tilføjopgsegue" {
         let nextVC = segue.destination as! tilf_jopgViewController
-        nextVC.tidlVC = self 
+            nextVC.tidlVC = self }
+        
+        if segue.identifier == "valgtOpgaveSegue"{
+            let nextVC = segue.destination as! seOpgViewController
+            nextVC.opgaver = sender as! opgave
+            
+            
+        
+        
+        }
+        
     }
     
     
