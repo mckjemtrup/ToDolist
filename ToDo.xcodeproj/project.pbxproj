@@ -13,7 +13,6 @@
 		D6E933401E632B1E0026C86A /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6E9333E1E632B1E0026C86A /* ToDo.xcdatamodeld */; };
 		D6E933421E632B1E0026C86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E933411E632B1E0026C86A /* Assets.xcassets */; };
 		D6E933451E632B1E0026C86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E933431E632B1E0026C86A /* LaunchScreen.storyboard */; };
-		D6E9334D1E63300A0026C86A /* OgaveClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9334C1E63300A0026C86A /* OgaveClass.swift */; };
 		D6E9334F1E633D240026C86A /* tilføjopgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9334E1E633D240026C86A /* tilføjopgViewController.swift */; };
 		D6E933531E635DE50026C86A /* seOpgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E933521E635DE50026C86A /* seOpgViewController.swift */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,6 @@
 		D6E933411E632B1E0026C86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6E933441E632B1E0026C86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6E933461E632B1E0026C86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D6E9334C1E63300A0026C86A /* OgaveClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OgaveClass.swift; sourceTree = "<group>"; };
 		D6E9334E1E633D240026C86A /* tilføjopgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "tilføjopgViewController.swift"; sourceTree = "<group>"; };
 		D6E933521E635DE50026C86A /* seOpgViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = seOpgViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -67,7 +65,6 @@
 				D6E933521E635DE50026C86A /* seOpgViewController.swift */,
 				D6E9334E1E633D240026C86A /* tilføjopgViewController.swift */,
 				D6E9333B1E632B1E0026C86A /* Main.storyboard */,
-				D6E9334C1E63300A0026C86A /* OgaveClass.swift */,
 				D6E933411E632B1E0026C86A /* Assets.xcassets */,
 				D6E933431E632B1E0026C86A /* LaunchScreen.storyboard */,
 				D6E933461E632B1E0026C86A /* Info.plist */,
@@ -153,7 +150,6 @@
 				D6E933401E632B1E0026C86A /* ToDo.xcdatamodeld in Sources */,
 				D6E933531E635DE50026C86A /* seOpgViewController.swift in Sources */,
 				D6E933381E632B1E0026C86A /* AppDelegate.swift in Sources */,
-				D6E9334D1E63300A0026C86A /* OgaveClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

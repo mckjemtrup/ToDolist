@@ -13,7 +13,7 @@ class tilf_jopgViewController: UIViewController {
     @IBOutlet weak var vigtighedsswitch: UISwitch!
     @IBOutlet weak var opgaveNavnTekstBoks: UITextField!
     
-   var tidlVC = OversigtViewController()
+  
     
       
     override func viewDidLoad() {
@@ -25,13 +25,18 @@ class tilf_jopgViewController: UIViewController {
     
     @IBAction func opretOpgave(_ sender: Any) {
         
-        let opgaven = opgave()
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
         
-        opgaven.opgnavn = opgaveNavnTekstBoks.text!
+        let opgaven = Opgave(context: context)
+        
+        opgaven.opgavenavn = opgaveNavnTekstBoks.text!
         opgaven.vigtighed = vigtighedsswitch.isOn
         
-        tidlVC.opgaver.append(opgaven)
-        tidlVC.TaskTableView.reloadData()
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
+        
+        
+       
         navigationController! .popViewController(animated: true)
         
     }

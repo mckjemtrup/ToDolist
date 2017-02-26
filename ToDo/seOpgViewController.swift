@@ -12,10 +12,10 @@ class seOpgViewController: UIViewController {
     
    
     
-    var opgaver = opgave()
-    var tidlVC = OversigtViewController()
+    var opgaver : Opgave? = nil
     
-    @IBOutlet weak var vigtigLabel: UILabel!
+    
+   
     @IBOutlet weak var OPGLabel: UILabel!
 
     override func viewDidLoad() {
@@ -24,10 +24,10 @@ class seOpgViewController: UIViewController {
         // Do any additional setup after loading the view.
   
         
-        if opgaver.vigtighed {
-            OPGLabel.text = "‼️\(opgaver.opgnavn)"
+        if opgaver!.vigtighed {
+            OPGLabel!.text = "‼️\(opgaver!.opgavenavn!)"
         } else {
-            OPGLabel.text = opgaver.opgnavn
+            OPGLabel!.text = "\(opgaver!.opgavenavn!)"
         }
         
       
@@ -36,8 +36,9 @@ class seOpgViewController: UIViewController {
 
     
     @IBAction func SubmitBtnPushed(_ sender: Any) {
-        tidlVC.opgaver.remove(at: tidlVC.valgtIndex)
-        tidlVC.TaskTableView.reloadData()
+let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        context.delete(opgaver!)
+        (UIApplication.shared.delegate as! AppDelegate).saveContext()
         navigationController!.popViewController(animated: true)
         
        
