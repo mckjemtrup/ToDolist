@@ -13,6 +13,7 @@
 		D6E933401E632B1E0026C86A /* ToDo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6E9333E1E632B1E0026C86A /* ToDo.xcdatamodeld */; };
 		D6E933421E632B1E0026C86A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D6E933411E632B1E0026C86A /* Assets.xcassets */; };
 		D6E933451E632B1E0026C86A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6E933431E632B1E0026C86A /* LaunchScreen.storyboard */; };
+		D6E9334D1E63300A0026C86A /* OgaveClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6E9334C1E63300A0026C86A /* OgaveClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		D6E933411E632B1E0026C86A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D6E933441E632B1E0026C86A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6E933461E632B1E0026C86A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6E9334C1E63300A0026C86A /* OgaveClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OgaveClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				D6E933371E632B1E0026C86A /* AppDelegate.swift */,
 				D6E933391E632B1E0026C86A /* ViewController.swift */,
 				D6E9333B1E632B1E0026C86A /* Main.storyboard */,
+				D6E9334C1E63300A0026C86A /* OgaveClass.swift */,
 				D6E933411E632B1E0026C86A /* Assets.xcassets */,
 				D6E933431E632B1E0026C86A /* LaunchScreen.storyboard */,
 				D6E933461E632B1E0026C86A /* Info.plist */,
@@ -142,6 +145,7 @@
 				D6E9333A1E632B1E0026C86A /* ViewController.swift in Sources */,
 				D6E933401E632B1E0026C86A /* ToDo.xcdatamodeld in Sources */,
 				D6E933381E632B1E0026C86A /* AppDelegate.swift in Sources */,
+				D6E9334D1E63300A0026C86A /* OgaveClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
